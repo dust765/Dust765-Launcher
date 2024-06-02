@@ -16,7 +16,7 @@
         Background="{DynamicResource PrimaryHueDarkBrush}"
         Icon="/Resources/taz2.png"
         ResizeMode="NoResize"
-        Title="TazUO Launcher" SizeToContent="WidthAndHeight">
+        Title="Dust765 Launcher" SizeToContent="WidthAndHeight">
     <Window.Resources>
         <Style TargetType="{x:Type ComboBoxItem}">
             <Setter Property="Foreground" Value="Blue" />
@@ -44,10 +44,10 @@
 
         <ComboBox x:Name="ProfileSelector" 
                   Style="{DynamicResource MaterialDesignComboBox}"
-                  Foreground="DarkOrange" 
+                  Foreground="DarkRed" 
                   Background="#202020" 
-                  materialDesign:TextFieldAssist.UnderlineBrush="DarkOrange" 
-                  BorderBrush="DarkOrange" 
+                  materialDesign:TextFieldAssist.UnderlineBrush="DarkRed" 
+                  BorderBrush="DarkRed" 
                   Canvas.Left="300"
                   Canvas.Top="255" 
                   MaxWidth="170"
@@ -56,7 +56,7 @@
 
         </ComboBox>
 
-        <materialIcons:MaterialIcon Kind="Settings" Foreground="DarkOrange" Background="Transparent" Canvas.Left="475" Canvas.Top="255" ToolTip="Profiles" MouseUp="ProfileSettingsButtonMouseUp">
+        <materialIcons:MaterialIcon Kind="Settings" Foreground="DarkRed" Background="Transparent" Canvas.Left="475" Canvas.Top="255" ToolTip="Profiles" MouseUp="ProfileSettingsButtonMouseUp">
             <materialIcons:MaterialIcon.Style>
                 <Style TargetType="materialIcons:MaterialIcon">
                     <Style.Triggers>
@@ -90,16 +90,16 @@
         </Button>
 
         <Rectangle Name="VersionRectangle" Width="180" Height="55" Canvas.Bottom="5" Canvas.Left="310" Fill="#BF202020" HorizontalAlignment="Left" Canvas.Top="390" VerticalAlignment="Center"></Rectangle>
-        <Label Canvas.Left="{Binding (Canvas.Left),ElementName=VersionRectangle}" Canvas.Bottom="5" Content="{x:Static local:LauncherSettings.LauncherVersionString}" HorizontalContentAlignment="Center" Width="{Binding (Width),ElementName=VersionRectangle}" Foreground="DarkOrange"></Label>
-        <Label Name="RemoteVersionText" Canvas.Left="{Binding (Canvas.Left),ElementName=VersionRectangle}" Canvas.Bottom="35" HorizontalContentAlignment="Center" Width="{Binding (Width),ElementName=VersionRectangle}"  Visibility="Hidden" Foreground="DarkOrange"></Label>
-        <Label Name="LocalVersionText" Canvas.Left="{Binding (Canvas.Left),ElementName=VersionRectangle}" Canvas.Bottom="20" HorizontalContentAlignment="Center" Width="{Binding (Width),ElementName=VersionRectangle}"  Visibility="Hidden" Foreground="DarkOrange"></Label>
+        <Label Canvas.Left="{Binding (Canvas.Left),ElementName=VersionRectangle}" Canvas.Bottom="5" Content="{x:Static local:LauncherSettings.LauncherVersionString}" HorizontalContentAlignment="Center" Width="{Binding (Width),ElementName=VersionRectangle}" Foreground="DarkRed"></Label>
+        <Label Name="RemoteVersionText" Canvas.Left="{Binding (Canvas.Left),ElementName=VersionRectangle}" Canvas.Bottom="35" HorizontalContentAlignment="Center" Width="{Binding (Width),ElementName=VersionRectangle}"  Visibility="Hidden" Foreground="DarkRed"></Label>
+        <Label Name="LocalVersionText" Canvas.Left="{Binding (Canvas.Left),ElementName=VersionRectangle}" Canvas.Bottom="20" HorizontalContentAlignment="Center" Width="{Binding (Width),ElementName=VersionRectangle}"  Visibility="Hidden" Foreground="DarkRed"></Label>
 
         <ScrollViewer Name="NewsArea" Width="282" Height="400" Background="#F2202020" Foreground="#FFDADADA" Visibility="Collapsed" Canvas.Left="10" Canvas.Top="40">
         </ScrollViewer>
 
         <Border Name="NewsAreaBorder" Width="292" Height="410" BorderThickness="5, 5, 5, 5" Canvas.Left="5" Visibility="Collapsed" Canvas.Top="35" BorderBrush="#F2101010"/>
 
-        <Label Canvas.Top="5" Canvas.Left="5" Foreground="DarkOrange" FontWeight="Bold" ToolTip="Show or hide change log." MouseUp="ShowNotesButtonUp">
+        <Label Canvas.Top="5" Canvas.Left="5" Foreground="DarkRed" FontWeight="Bold" ToolTip="Show or hide change log." MouseUp="ShowNotesButtonUp">
             <Label.Style>
                 <Style TargetType="Label">
                     <Style.Triggers>
@@ -117,7 +117,7 @@
         </Label>
 
 
-        <materialIcons:MaterialIcon Kind="HammerScrewdriver" Canvas.Right="10" Canvas.Top="10" Foreground="DarkOrange" Background="Transparent">
+        <materialIcons:MaterialIcon Kind="HammerScrewdriver" Canvas.Right="10" Canvas.Top="10" Foreground="DarkRed" Background="Transparent">
             <materialIcons:MaterialIcon.ContextMenu>
                 
                 <ContextMenu x:Name="ToolsMenu">

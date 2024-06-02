@@ -82,10 +82,10 @@
                         <Label Grid.Row="2">Server Presets</Label>
                         <ComboBox x:Name="PresetServerDropdown" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" 
                                   Style="{DynamicResource MaterialDesignComboBox}"
-                                  Foreground="DarkOrange" 
+                                  Foreground="DarkRed" 
                                   Background="#202020" 
-                                  materialDesign:TextFieldAssist.UnderlineBrush="DarkOrange" 
-                                  BorderBrush="DarkOrange"
+                                  materialDesign:TextFieldAssist.UnderlineBrush="DarkRed" 
+                                  BorderBrush="DarkRed"
                                   Margin="5, 5">
                             <ComboBoxItem Foreground="#202020" Content="EA OSI" Tag="107.23.176.74:7775"/>
                             <ComboBoxItem Foreground="#202020" Content="UOAlive" Tag="login.uoalive.com:2593"/>

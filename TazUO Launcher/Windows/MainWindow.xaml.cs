@@ -38,7 +38,7 @@ namespace TazUO_Launcher
             {
                 if (UpdateManager.Instance.RemoteVersion != null)
                 {
-                    RemoteVersionText.Content = $"Latest TazUO version: {UpdateManager.Instance.RemoteVersion.ToString(3)}";
+                    RemoteVersionText.Content = $"Latest Dust765 version: {UpdateManager.Instance.RemoteVersion.ToString(3)}";
                     RemoteVersionText.Visibility = Visibility.Visible;
 
                     if (UpdateManager.Instance.MainReleaseData != null)
@@ -149,7 +149,7 @@ namespace TazUO_Launcher
 
         private void DiscordIconMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var destinationurl = "https://discord.gg/SqwtB5g95H";
+            var destinationurl = "https://discord.gg/SefXdZTf";
             var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
             {
                 UseShellExecute = true,
@@ -159,7 +159,7 @@ namespace TazUO_Launcher
 
         private void GithubIconMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var destinationurl = "https://github.com/bittiez/TazUO";
+            var destinationurl = "https://github.com/dust765/ClassicUO";
             var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
             {
                 UseShellExecute = true,
@@ -169,7 +169,7 @@ namespace TazUO_Launcher
 
         private void WikiMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var destinationurl = "https://github.com/bittiez/TazUO/wiki";
+            var destinationurl = "https://github.com/dust765/ClassicUO";
             var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
             {
                 UseShellExecute = true,
@@ -262,10 +262,10 @@ namespace TazUO_Launcher
         private void ImportDataFolder(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show(
-                "This will copy the contents of the folder you select into your TazUO Data folder.\n\n" +
-                "You need to select the Data folder of a CLASSICUO or TAZUO folder, NOT the Data folder of an official EA UO installation.\n\n" +
+                "This will copy the contents of the folder you select into your Dust765 Data folder.\n\n" +
+                "You need to select the Data folder of a CLASSICUO or Dust765 folder, NOT the Data folder of an official EA UO installation.\n\n" +
                 "The folder you are looking for should contain a Client and Profiles folder, select the Data folder containing these, not these sub-folders.\n\n" +
-                "!! Make sure your TazUO client is not running. !!\n\n" +
+                "!! Make sure your Dust765 client is not running. !!\n\n" +
                 "Do you understand and want to continue?", "Warning", MessageBoxButton.YesNo)
                 ;
 
@@ -277,7 +277,7 @@ namespace TazUO_Launcher
                 {
                     if (Directory.Exists(Path.Combine(folderPath, "Profiles"))) //Selected folder has a Profiles folder, more likely to be the correct folder
                     {
-                        string tuoDir = Path.Combine(LauncherSettings.LauncherPath + "TazUO");
+                        string tuoDir = Path.Combine(LauncherSettings.LauncherPath + "Dust765");
                         if (Directory.Exists(tuoDir))
                         {
                             try
@@ -336,7 +336,7 @@ namespace TazUO_Launcher
             Version? l = UpdateManager.Instance.GetInstalledVersion(Utility.Utility.GetTazUOExecutable());
             if (l != null)
             {
-                LocalVersionText.Content = $"Your TazUO version: {l.ToString(3)}";
+                LocalVersionText.Content = $"Your Dust765 version: {l.ToString(3)}";
                 LocalVersionText.Visibility = Visibility.Visible;
             }
             localVersionCheck = true;

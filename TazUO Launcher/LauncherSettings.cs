@@ -24,7 +24,7 @@ namespace TazUO_Launcher
 
         public static string SettingsPath { get; set; } = Path.Combine(ProfilesPath, "Settings");
 
-        public static string TazUOPath { get; set; } = Path.Combine(LauncherPath, "TazUO");
+        public static string TazUOPath { get; set; } = Path.Combine(LauncherPath, "Dust765");
 
         public static int LastSelectedProfileIndex
         {
@@ -56,7 +56,7 @@ namespace TazUO_Launcher
             RegistryKey key = Registry.CurrentUser.OpenSubKey("Software", true);
             if (key != null)
             {
-                key = key.CreateSubKey("TazUOLauncher");
+                key = key.CreateSubKey("Dust765Launcher");
                 key?.SetValue(keyName, value);
             }
         }
@@ -66,7 +66,7 @@ namespace TazUO_Launcher
             RegistryKey key = Registry.CurrentUser.OpenSubKey("Software", false);
             if (key != null)
             {
-                key = key.OpenSubKey("TazUOLauncher");
+                key = key.OpenSubKey("Dust765Launcher");
                 if (key != null)
                 {
                     var result = key?.GetValue(keyName)?.ToString();

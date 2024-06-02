@@ -14,14 +14,14 @@
             </ResourceDictionary.MergedDictionaries>
             <!-- primary -->
             <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#707070"/>
-            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="DarkOrange"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="DarkRed"/>
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#454545"/>
-            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="DarkOrange"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="DarkRed"/>
             <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#303030"/> 
-            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="DarkOrange"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="DarkRed"/>
             <!-- accent -->
             <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="AntiqueWhite"/>
-            <SolidColorBrush x:Key="SecondaryHueMidForegroundBrush" Color="DarkOrange"/>
+            <SolidColorBrush x:Key="SecondaryHueMidForegroundBrush" Color="DarkRed"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

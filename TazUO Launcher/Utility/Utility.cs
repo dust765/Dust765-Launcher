@@ -13,7 +13,7 @@ namespace TazUO_Launcher.Utility
 
         public static bool FindTazUO()
         {
-            string tuoPath = Path.Combine(LauncherSettings.LauncherPath, "TazUO", "ClassicUO.exe");
+            string tuoPath = Path.Combine(LauncherSettings.LauncherPath, "Dust765", "ClassicUO.exe");
 
             if (File.Exists(tuoPath))
             {
@@ -25,11 +25,11 @@ namespace TazUO_Launcher.Utility
 
         public static string GetTazUOExecutable()
         {
-            string exePath = Path.Combine(LauncherSettings.LauncherPath, "TazUO", "TazUO.exe");
+            string exePath = Path.Combine(LauncherSettings.LauncherPath, "Dust765", "Dust765.exe");
             if (File.Exists(exePath))
                 return exePath;
 
-            return Path.Combine(LauncherSettings.LauncherPath, "TazUO", "ClassicUO.exe");
+            return Path.Combine(LauncherSettings.LauncherPath, "Dust765", "ClassicUO.exe");
         }
 
         public static string AskForFile(string intialDirectory, string fileFilter)

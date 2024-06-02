@@ -15,7 +15,7 @@ namespace TazUO_Launcher.Utility
 {
     class UpdateManager
     {
-        private const string UPDATE_ZIP_URL = "https://github.com/bittiez/ClassicUO/releases/latest/download/TazUO.zip";
+        private const string UPDATE_ZIP_URL = "https://github.com/dust765/ClassicUO/releases/latest/download/TazUOvsDust765.zip";
 
         public static UpdateManager Instance { get; private set; } = new UpdateManager();
         public bool DownloadInProgress { get; private set; } = false;
@@ -61,7 +61,7 @@ namespace TazUO_Launcher.Utility
                         {
                             if (
                                 asset.name.EndsWith(".zip") &&
-                                (asset.name.StartsWith("ClassicUO") || asset.name.StartsWith("TazUO"))
+                                (asset.name.StartsWith("ClassicUO") || asset.name.StartsWith("Dust765"))
                                 )
                             {
                                 httpClient.DownloadAsync(asset.browser_download_url, file, downloadProgress).Wait();
@@ -114,7 +114,7 @@ namespace TazUO_Launcher.Utility
 
             Task download = Task.Factory.StartNew(() =>
             {
-                string tempFilePath = Path.Combine(Path.GetTempPath(), "tuo.launcher.zip");
+                string tempFilePath = Path.Combine(Path.GetTempPath(), "dust765.launcher.zip");
                 using (var file = new FileStream(tempFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
                     if (LauncherReleaseData != null)
@@ -123,7 +123,7 @@ namespace TazUO_Launcher.Utility
                         {
                             if (
                                 asset.name.EndsWith(".zip") &&
-                                (asset.name.StartsWith("Launcher") || asset.name.StartsWith("TazUO"))
+                                (asset.name.StartsWith("Launcher") || asset.name.StartsWith("dust765"))
                                 )
                             {
                                 httpClient.DownloadAsync(asset.browser_download_url, file, downloadProgress).Wait();
@@ -171,13 +171,13 @@ namespace TazUO_Launcher.Utility
                 string tempFilePath = Path.GetTempFileName();
                 using (var file = new FileStream(tempFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
-                    GitHubReleaseData bleedingEdgeData = GetReleaseData("https://api.github.com/repos/bittiez/TazUO/releases/tags/TazUO-BleedingEdge");
+                    GitHubReleaseData bleedingEdgeData = GetReleaseData("https://api.github.com/repos/dust765/ClassicUO/releases/tags");
 
                     if (bleedingEdgeData != null)
                     {
                         foreach (GitHubReleaseData.Asset asset in bleedingEdgeData.assets)
                         {
-                            if (asset.name.EndsWith(".zip") && asset.name.StartsWith("WindowsTazUO"))
+                            if (asset.name.EndsWith(".zip") && asset.name.StartsWith("WindowsDust765"))
                             {
                                 httpClient.DownloadAsync(asset.browser_download_url, file, downloadProgress).Wait();
                                 break;
@@ -226,7 +226,7 @@ namespace TazUO_Launcher.Utility
             }
         }
 
-        public void GetRemoteVersionAsync(Action? onVersionFound = null, string url = "https://api.github.com/repos/bittiez/TazUO/releases/latest")
+        public void GetRemoteVersionAsync(Action? onVersionFound = null, string url = "https://api.github.com/repos/dust765/ClassicUO/releases/latest")
         {
             Task.Factory.StartNew(() =>
             {
@@ -274,7 +274,7 @@ namespace TazUO_Launcher.Utility
                 HttpRequestMessage restApi = new HttpRequestMessage()
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("https://api.github.com/repos/bittiez/TUO-Launcher/releases/latest"),
+                    RequestUri = new Uri("https://api.github.com/repos/dust765/Dust765-Launcher/releases/latest"),
                 };
                 restApi.Headers.Add("X-GitHub-Api-Version", "2022-11-28");
                 restApi.Headers.Add("User-Agent", "Public");
