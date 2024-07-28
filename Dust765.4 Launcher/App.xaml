@@ -1,0 +1,27 @@
+﻿<Application x:Class="Dust7654_Launcher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Dust7654_Launcher"
+             xmlns:materialIcons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+             StartupUri="Windows/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!-- primary -->
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#707070"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="DarkRed"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#454545"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="DarkRed"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#303030"/> 
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="DarkRed"/>
+            <!-- accent -->
+            <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="AntiqueWhite"/>
+            <SolidColorBrush x:Key="SecondaryHueMidForegroundBrush" Color="DarkRed"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
