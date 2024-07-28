@@ -1,7 +1,6 @@
-# TUO-Launcher
+# Dust765.4-Launcher
 A launcher for TazUO  
-![image](https://github.com/bittiez/TUO-Launcher/assets/3859393/a3b67664-4093-4641-a4f7-1ab0cce1b26f)
-
+![image](dust765.4_launcher.png)
 
 ## Installation  
-Download the latest release, unzip it and open `TazUO Launcher.exe`!
+Download the latest release, unzip it and open `Dust765.4 Launcher.exe`!
