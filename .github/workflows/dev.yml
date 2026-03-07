@@ -21,8 +21,9 @@ jobs:
         id: version
         run: |
           $sha = "${{ github.sha }}".Substring(0, 7)
-          $version = "dev-$sha"
+          $version = "1.0.0-dev.$sha"
           echo "VERSION=$version" >> $env:GITHUB_OUTPUT
+          echo "FILE_VERSION=1.0.0.${{ github.run_number }}" >> $env:GITHUB_OUTPUT
 
       - name: Publish
         run: |
@@ -32,8 +33,8 @@ jobs:
             --self-contained true `
             -o publish `
             -p:Version=${{ steps.version.outputs.VERSION }} `
-            -p:AssemblyVersion=${{ steps.version.outputs.VERSION }} `
-            -p:FileVersion=${{ steps.version.outputs.VERSION }}
+            -p:AssemblyVersion=${{ steps.version.outputs.FILE_VERSION }} `
+            -p:FileVersion=${{ steps.version.outputs.FILE_VERSION }}
 
       - name: Create artifact
         run: |
