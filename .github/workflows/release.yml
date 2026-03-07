@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Parse version
+        id: version
+        run: |
+          $tag = "${{ github.ref_name }}"
+          $version = $tag -replace '^v', ''
+          echo "VERSION=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Publish
+        run: |
+          dotnet publish "Dust765.4 Launcher/Dust765.4 Launcher.csproj" `
+            -c Release `
+            -r win-x64 `
+            --self-contained true `
+            -o publish `
+            -p:Version=${{ steps.version.outputs.VERSION }} `
+            -p:AssemblyVersion=${{ steps.version.outputs.VERSION }} `
+            -p:FileVersion=${{ steps.version.outputs.VERSION }}
+
+      - name: Create artifact
+        run: |
+          Compress-Archive -Path publish/* -DestinationPath "Dust765.4-Launcher-${{ steps.version.outputs.VERSION }}.zip"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            publish/Dust765.4 Launcher.exe
+            Dust765.4-Launcher-${{ steps.version.outputs.VERSION }}.zip
+          generate_release_notes: true
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -149,7 +149,7 @@ namespace Dust7654_Launcher
 
         private void DiscordIconMouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var destinationurl = "https://discord.gg/SefXdZTf";
+            var destinationurl = "https://discord.gg/kjzFEEyD";
             var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
             {
                 UseShellExecute = true,
