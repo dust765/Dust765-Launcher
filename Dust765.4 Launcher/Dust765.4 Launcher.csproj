@@ -1,13 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
     <RootNamespace>Dust7654_Launcher</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <SignAssembly>False</SignAssembly>
     <Title>Dust7654 Launcher</Title>
