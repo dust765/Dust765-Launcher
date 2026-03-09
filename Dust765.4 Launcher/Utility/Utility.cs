@@ -69,7 +69,7 @@ namespace Dust7654_Launcher.Utility
 
         public static void OpenLauncherDownloadLink()
         {
-            var destinationurl = "https://github.com/bittiez/TUO-Launcher/releases/latest";
+            var destinationurl = "https://github.com/dust765/Dust765-Launcher/releases/latest";
             var sInfo = new System.Diagnostics.ProcessStartInfo(destinationurl)
             {
                 UseShellExecute = true,
